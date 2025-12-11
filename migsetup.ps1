@@ -1,10 +1,10 @@
 ﻿$migVarName;
-$choice = Read-Host "Установить EntityFramework перед миграцией? (Y/N)";
+$choice = Read-Host "Install EntityFramework before migration? (Y/N)";
     
 function TurnMigratiON {
     param ($migParamName)
     Enable-Migrations;
-    $migParamName = Read-Host "Введите имя переменной для миграции: ";
+    $migParamName = Read-Host "Enter variable name for migration: ";
     Add-Migration $migParamName;
     Update-DataBase;
 }
